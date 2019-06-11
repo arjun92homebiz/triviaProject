@@ -1,0 +1,25 @@
+<form #nameForm="ngForm" (ngSubmit)="enterName(nameForm)">
+  <label for="">Name</label>
+  <input type="text" ngModel name="Name">
+
+<form #qForm="ngForm" (ngSubmit)="submitAnswers(qForm)">
+    <div *ngFor=let question of questions, index as i;>
+        <p>Question: {{ question_name.question }}</p>
+
+        <input value="{{question.choice_1}}" name="question{{i + 1}}" ngModel type="radio">
+        <label for="">{{ question.choice1 }}</label>
+        
+        <input value="{{question.choice_2}}" name="question{{i + 1}}" ngModel type="radio">
+        <label for="">{{ question.choice2 }}</label>
+
+        <input value="{{question.choice_3}}" name="question{{i + 1}}" ngModel type="radio">
+        <label for="">{{ question.choice3 }}</label>
+    
+        <input value="{{question.choice_4}}" name="question{{i + 1}}" ngModel type="radio">
+        <label for="">{{ question.choice4 }}</label>
+
+  </div>
+  <button>Submit your scores</button>
+</form>
+
+      

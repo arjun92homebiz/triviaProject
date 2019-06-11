@@ -1,0 +1,6 @@
+<h2>Results</h2>
+<p> {{ name }} has a score of {{ score }}</p>
+<div #resultcontainer="ngclass" *ngfor="let question of questions; index as i">
+  <p>Name: {{ question.name }} </p>
+  <p>Result: {{ question.question_result }}</p>
+</div>
